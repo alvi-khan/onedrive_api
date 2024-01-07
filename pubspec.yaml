@@ -1,6 +1,6 @@
 name: onedrive_api
 description: OneDrive API module for Flutter and Dart.
-version: 1.0.0
+version: 0.1.0
 repository: https://github.com/alvi-khan/onedrive_api
 
 environment:

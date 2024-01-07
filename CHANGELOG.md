@@ -1,3 +1,4 @@
-## 1.0.0
+## 0.1.0
 
-- Initial version.
+- Initial release.
+- Adds support for folder creation endpoint.
