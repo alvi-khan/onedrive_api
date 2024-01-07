@@ -1,5 +1,7 @@
+enum DriveType { user, drive, group, site }
+
 class Params {
-  String? drive;
+  DriveType? drive;
   String? driveId;
   String? accessToken;
 }

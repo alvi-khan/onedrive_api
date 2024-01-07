@@ -1,10 +1,10 @@
 import '../src/params.dart';
 
 String generateUserPath(Params params) {
-  if (params.drive == "user") return "users/${params.driveId}/drive/";
-  if (params.drive == "drive") return "drives/${params.driveId}/";
-  if (params.drive == "group") return "groups/${params.driveId}/drive/";
-  if (params.drive == "site") return "sites/${params.driveId}/drive/";
+  if (params.drive == DriveType.user) return "users/${params.driveId}/drive/";
+  if (params.drive == DriveType.drive) return "drives/${params.driveId}/";
+  if (params.drive == DriveType.group) return "groups/${params.driveId}/drive/";
+  if (params.drive == DriveType.site) return "sites/${params.driveId}/drive/";
   return "me/drive/";
 }
 
