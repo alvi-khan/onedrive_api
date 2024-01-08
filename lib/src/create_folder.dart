@@ -4,19 +4,7 @@ import 'package:onedrive_api/helpers/http_helper.dart';
 import 'package:onedrive_api/helpers/path_helper.dart';
 import 'package:onedrive_api/src/params.dart';
 
-class Response {
-  String? errorMsg;
-  String? itemId;
-
-  Response(this.errorMsg, this.itemId);
-
-  factory Response.fromJson(Map<String, dynamic> data) {
-    return Response(
-      data['error']?['message'],
-      data['id'],
-    );
-  }
-}
+import 'core.dart';
 
 Future<Response> createFolder(FolderParams params) async {
   if (params.accessToken == null) {
@@ -46,6 +34,5 @@ Future<Response> createFolder(FolderParams params) async {
   };
 
   var response = await post(endpoint, params.accessToken!, jsonData);
-  Response data = Response.fromJson(jsonDecode(response.body));
-  return data;
+  return Response.fromJson(response.statusCode, jsonDecode(response.body));
 }

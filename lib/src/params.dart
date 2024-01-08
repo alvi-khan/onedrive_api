@@ -6,8 +6,11 @@ class Params {
   String? accessToken;
 }
 
-class FolderParams extends Params {
-  String? name;
+class ItemParams extends Params {
   String? itemId;
   String? itemPath;
+}
+
+class FolderParams extends ItemParams {
+  String? name;
 }

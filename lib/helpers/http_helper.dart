@@ -21,3 +21,14 @@ Future<http.Response> post(
     body: jsonEncode(jsonData),
   );
 }
+
+Future<http.Response> delete(String endpoint, String accessToken) {
+  Uri url = Uri.parse("$apiUrl$endpoint");
+
+  Map<String, String> headers = {
+    'Content-Type': 'application/json',
+    'Authorization': "Bearer $accessToken",
+  };
+
+  return http.delete(url, headers: headers);
+}
