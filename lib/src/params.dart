@@ -14,3 +14,10 @@ class ItemParams extends Params {
 class FolderParams extends ItemParams {
   String? name;
 }
+
+class UploadParams extends Params {
+  String? filename;
+  String? parentId;
+  String? parentPath;
+  String? filepath;
+}
